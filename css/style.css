@@ -251,7 +251,7 @@
 
 
 /* making about service .responsive */
-@media screen and (max-width:480px) {
+@media screen and (min-device-width: 320px) and (max-device-width:480px) {
     .about-service .service-image{
         height: 20vh;
     }
