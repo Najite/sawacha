@@ -5,11 +5,16 @@
 }
 
 
+.container{
+    padding: 1.5em 1em;
+}
+
 /* styling the top navbar */
 .topnav{
     background-color: rgb(243, 12, 51);
     overflow: hidden;    
     font-size: 1em;    
+    height: 13vh;
 }
 
 .topnav a{
@@ -81,7 +86,7 @@
 /* styling the banner section */
 .banner{
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     background-color: #000;
     color: #fff;
     display: flex;
@@ -221,7 +226,7 @@
 
 /* the about service section */
 .about-service{
-    padding: 3em 2em;
+    margin: 5em 2em;
     display: flex;
     flex-direction: column;    
     
@@ -246,13 +251,13 @@
     margin-top: 4em;
     justify-content: space-between;
     flex-wrap: wrap;
-    height: 40vh;
+    
     overflow: hidden;
 }
 
 .about-service .service-image{
-    width: 35vw;   
-    height: 40vh;
+    width: 40vw;   
+    height: 60vh;
     
 }
 
@@ -261,14 +266,24 @@
     width: 100%;   
     height: 100%;
     
-} 
+}
+
 
 .about-service .service h3{
-    width: 50vw;
-    padding: 2em 3em;
     text-transform: capitalize;
     font-size: 2em;
+    margin-bottom: 1em;
+    
+}
 
+.about-service .service{
+    width: 50vw;
+    padding: 2em 5em;
+}
+
+.about-service .service p{
+    margin-top: .4em;
+    font-size: 1.1em;
 }
 
 
@@ -276,36 +291,69 @@
 @media screen and (min-device-width: 320px) and (max-device-width:480px) {
     .about-service{
         display: block;
+        margin: 2em 0em;
     }
     .about-service .service-image{
-        height: 20vh;
+        height: 35vh;
         width: 100%;
     }
-    
+
+    .about-service .service{
+        padding: 0em;
+        margin-top: 1.5em;
+        width: 100%;
+        overflow: hidden;        
+    }
+
     .about-service .service h3{
-        font-size: 1.1em;
-        font-weight: lighter;
-        width: 100%;
-        padding: 0px;
-        
+        font-size: 1.5em;
     }
+
+    
+    
 }
 
 
 
 /* project section styling */
-.about-service .project{
-    height: 100vh;
-    display: flex;
+.project{
+    color: #fff;
     margin-top: 2em;
+    padding: 2em;
+    width: 100%;
+    background-color: #000;
     
 }
 
-.about-service .project h1{
-    background-color: #000;
-    color: #fff;
-    padding: .2em;
+
+
+.project .project-container{
+    display: flex;
+    margin: 3em 0em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
 }
+
+.project-container .pink-box, .black-box{
+    width: 22vw;
+    height: 40vh;
+    margin: 1em 0em;
+    text-align: center;
+    line-height: 2em;
+    padding: 2em;
+}
+
+.project-container .pink-box{
+    background-color: rgb(243, 12, 51);
+    
+}
+
+.project-container .black-box{
+    background-color: #fff;
+    color: #000;
+}
+
 
 
 
