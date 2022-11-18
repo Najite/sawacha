@@ -175,20 +175,20 @@
 /* making banner text responsive */
 @media screen and (max-width:480px) {
     .banner{
-        height: 30vh;
-        padding: 2em 3em;
+        height: 50vh;
+        padding: 1em;
         
     }
     .banner .banner-title{
-        width: 100%;
+        width: 40vw;
         font-size: .6em;
         
     }
 
     .banner .banner-image{
-        width: 50vw;
+        width: 40vw;
         height: 15vh;
-        margin: 1em 0em;
+        margin: 2em 1em;
     }
     
 }
@@ -252,13 +252,19 @@
 
 /* making about service .responsive */
 @media screen and (min-device-width: 320px) and (max-device-width:480px) {
+    .about-service{
+        display: block;
+    }
     .about-service .service-image{
         height: 20vh;
+        width: 100%;
     }
     
     .about-service .service h3{
         font-size: 1.1em;
         font-weight: lighter;
+        width: 100%;
+        padding: 0px;
         
     }
 }
