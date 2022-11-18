@@ -173,7 +173,7 @@
 
 
 /* making banner text responsive */
-@media screen and (max-width:480px) {
+@media screen and (min-divice-width:320px) and (max-width:480px) {
     .banner{
         height: 50vh;
         padding: 1em;
@@ -191,6 +191,31 @@
         margin: 2em 1em;
     }
     
+}
+
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .banner{
+        height: 45vh;
+        padding: 1em;
+        
+    }
+    .banner .banner-title{
+        width: 40vw;
+        font-size: .6em;
+        
+    }
+
+    .banner .banner-image{
+        width: 40vw;
+        height: 15vh;
+        margin: 2em 1em;
+    }
+
 }
 
 
