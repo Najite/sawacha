@@ -355,6 +355,23 @@
 }
 
 
+/* mobile resposive for services rendered */
+@media screen and (min-device-width: 320px) and (max-device-width:480px) {
+    .project .project-container{
+        display: block;
+    }
+
+    .project-container .pink-box, .black-box{
+        width: 100%;
+        height: 60vh;
+        font-size: .9em;
+        padding: 1em;
+    }
+
+
+}
+
+
 
 
 
