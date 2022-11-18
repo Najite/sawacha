@@ -173,7 +173,7 @@
 
 
 /* making banner text responsive */
-@media screen and (max-width:600px) {
+@media screen and (max-width:480px) {
     .banner{
         height: 30vh;
         padding: 2em 3em;
@@ -251,13 +251,13 @@
 
 
 /* making about service .responsive */
-@media screen and (max-width:600px) {
+@media screen and (max-width:480px) {
     .about-service .service-image{
         height: 20vh;
     }
     
     .about-service .service h3{
-        font-size: 1.4em;
+        font-size: 1.1em;
         font-weight: lighter;
         
     }
