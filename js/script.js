@@ -43,7 +43,7 @@ let move = () =>{
         x=1;
         let elem = document.querySelector('#python');
         let width = 1;
-        let id = setInterval(frame, 10);
+        let id = setInterval(frame, 70);
 
         function frame(){
             if( width >= 60){
@@ -71,7 +71,7 @@ let moveHtml = () =>{
         h=1;
         let elem = document.querySelector('#html');
         let width = 1;
-        let id = setInterval(frame, 10);
+        let id = setInterval(frame, 70);
 
         function frame(){
             if( width >= 100){
@@ -98,7 +98,7 @@ let moveCss = () =>{
         c=1;
         let elem = document.querySelector('#css');
         let width = 1;
-        let id = setInterval(frame, 10);
+        let id = setInterval(frame, 70);
 
         function frame(){
             if( width >= 50){
@@ -125,7 +125,7 @@ let moveJS = () =>{
         j=1;
         let elem = document.querySelector('#js');
         let width = 1;
-        let id = setInterval(frame, 10);
+        let id = setInterval(frame, 70);
 
         function frame(){
             if( width >= 30){
