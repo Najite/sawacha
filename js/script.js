@@ -36,14 +36,42 @@ window.addEventListener('load', bannerText)
 
 
 
+
+
+let callback = (entries) =>{
+    entries.forEach(
+        (entry) => {
+            if(entry.isIntersecting){
+                entry.target.style.animation = entry.target.dataset.skill;
+                move();
+                moveHtml();
+                moveCss();
+                moveJS()
+            } else {
+                entry.target.style.animation = 'none';
+            }
+        }
+    );
+}
+
+let observer = new IntersectionObserver(callback);
+
+const animationItem = document.querySelectorAll('.mini-skill, .progress');
+animationItem.forEach(item => {
+    observer.observe(item)
+})
+
+
+
 // skill animation for python
-let x = 0; 
 let move = () =>{
+let x = 0; 
+
     if(x == 0){
         x=1;
         let elem = document.querySelector('#python');
         let width = 1;
-        let id = setInterval(frame, 70);
+        let id = setInterval(frame, 35);
 
         function frame(){
             if( width >= 60){
@@ -53,15 +81,15 @@ let move = () =>{
                 width++;
                 elem.style.width = width + '%';
                 elem.innerHTML = width + '%';
-
-    
-
             }
         }
+
     }
+
+    
+    console.log('scroll')
 }
 
-window.addEventListener('load', move);
 
 
 // animating html skills
@@ -71,7 +99,7 @@ let moveHtml = () =>{
         h=1;
         let elem = document.querySelector('#html');
         let width = 1;
-        let id = setInterval(frame, 70);
+        let id = setInterval(frame, 35);
 
         function frame(){
             if( width >= 100){
@@ -87,10 +115,6 @@ let moveHtml = () =>{
     }
 }
 
-window.addEventListener('load', moveHtml);
-
-
-
 // animating css skills
 let c = 0;
 let moveCss = () =>{
@@ -98,7 +122,7 @@ let moveCss = () =>{
         c=1;
         let elem = document.querySelector('#css');
         let width = 1;
-        let id = setInterval(frame, 70);
+        let id = setInterval(frame, 35);
 
         function frame(){
             if( width >= 50){
@@ -114,10 +138,6 @@ let moveCss = () =>{
     }
 }
 
-window.addEventListener('load', moveCss);
-
-
-
 // animating javascript skill
 let j = 0;
 let moveJS = () =>{
@@ -125,7 +145,7 @@ let moveJS = () =>{
         j=1;
         let elem = document.querySelector('#js');
         let width = 1;
-        let id = setInterval(frame, 70);
+        let id = setInterval(frame, 35);
 
         function frame(){
             if( width >= 30){
@@ -141,9 +161,6 @@ let moveJS = () =>{
     }
 }
 
-window.addEventListener('load', moveJS);
 
 
-
-
-
+// window.addEventListener('scroll', move)
