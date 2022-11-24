@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css-dist/style.min.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>My Portfolio</title>
 </head>
 <body>
@@ -31,11 +34,24 @@
     <section class="banner">
         <div class="banner-title">
             <h1 id="text"></h1>
+
+            <button id="hire">Hire Me</button>
             
         </div>
 
         <div class="banner-image">
             <img src="/image/profile.jpg" alt="banner image">
+        </div>
+
+        <div class="hire-modal" id="hire-modal">
+            <div class="modal-content">
+                <span id="cancelBtn">&times;</span>
+                
+            </form>      
+            
+        </div>      
+
+
         </div>
     </section>
 
@@ -57,9 +73,9 @@
             
             <p>I achieve this by providing a holistic digital solution that covers information gathering, design and development, digital campaign and ongoing support to ensure overall success.</p> <br>
 
-            <p> We are passionate about what we do and we work with our clients to deliver a faster and better result.</p> <br>
+            <p> I am passionate about what I do and I work with my clients to deliver a faster and better result.</p> <br>
                 
-             <p> What differentiate us are our excellent service delivery, timely execution, and exceptional customer experience.</p> <br>
+             <p> What differentiate me is my excellent service delivery, timely execution, and exceptional customer experience.</p> <br>
             </div>
         </div>
     </div>
@@ -88,25 +104,8 @@
                     <h2>Keyword Research</h2>
                     Attract top clients by ranking on google first page. We optimize websites to ensure it rank top in search engine for better conversion
                 </div>
-                <div class="pink-box">
-                    <h2>Digital Marketing </h2>
-                    Expand your reach through digital marketing across social media and get prospects beyond your immediate environment
-                </div>
-                <div class="black-box">
-                    <h2>Mobile App</h2>
-                    <p>
-                        Improve user engagement and experience with mobile app.
-                        We develop apps for Android and iOS platforms
-                        
-                        </p>
-                </div>
-                <div class="pink-box">
-                    <h2>Web Optimization</h2>
-                </div>
-                <div class="black-box">
-                    <h2>Product Management</h2>
-
-                </div>
+                
+                
             </div>
 
         </div>
@@ -115,28 +114,49 @@
         <section class="skill">
             <div class="container">
             <h1>Skills</h1>
-            <div class="progress" data-skill="animeTitle 0.7s ease-in">
-                <div class="mini-skill" data-skill="animeTitle 2s">
+            <div class="progress animate" data-animate="animeTitle 3s ease ">
+                <div class="mini-skill animate" >
                 <h2> Python </h2><div class="python" id="python"> </div>
                 </div>
 
-                <div class="mini-skill" data-skill="animeTitle 3s">
+                <div class="mini-skill animate" data-animate="animeTitle 3s ease-in">
                     <h2> Html </h2><div id="html"> </div>
                 </div>
 
-                <div class="mini-skill" data-skill="animeTitle 4s">
+                <div class="mini-skill animate" >
                     <h2> CSS </h2><div id="css"> </div>
                 </div>
 
-                <div class="mini-skill" data-skill="animeTitle 5s">
+                <div class="mini-skill animate">
                     <h2> JavaScript </h2><div id="js"> </div>
                 </div>
             </div>
-                
-
-                
             </div>
                 
+            </div>
+            </div>
+        </section>
+
+        <!-- this area containes the projects done -->
+        <section class="project_section">
+            <div class="container">
+            <h2>Projects</h2>
+
+            <div class="project-box-container">
+                <div class="project-box">
+                    <img src="/image/cheap_flight.png" alt="cheap_flight" >
+                    <h3>Cheap Flight </h3>
+                </div>
+
+                <div class="project-box">
+                    <img src="/image/construction.png" alt="cheap_flight" >
+                    <h3>Construction Website </h3>
+                </div>
+
+                <div class="project-box">
+                    <img src="/image/mobile_wallet.png" alt="cheap_flight" >
+                    <h3>Virtual Account</h3>
+                </div>
             </div>
             </div>
         </section>
@@ -144,7 +164,9 @@
     
     
     
-
+    <footer class="bottom">
+        
+    </footer>
     <script src="/js/script.js"></script>
 </body>
 </html>

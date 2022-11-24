@@ -35,15 +35,43 @@ let bannerText = () => {
 window.addEventListener('load', bannerText)
 
 
+//adding modal hire form
+const modal = document.querySelector('#hire-modal');
+const hireBtn = document.querySelector('#hire');
+const close = document.querySelector('#cancelBtn')[0];
 
+const openModal = () => {
+    modal.style.display ='block'
+}
+
+hireBtn.addEventListener('click', openModal)
+
+const closeModal = () => {
+    modal.style.display = 'none';
+}
+close.addEventListener('click', closeModal);
+
+
+
+
+
+
+const closeBtn = () => {
+    const close_hire = document.querySelector('#cancelBtn');
+    close_hire.style.display='none';
+}
+
+window.addEventListener('click', hireBtn)
+window.addEventListener('click', closeBtn)
+// window.addEventListener('click', close_hire)
 
 
 let callback = (entries) =>{
     entries.forEach(
         (entry) => {
             if(entry.isIntersecting){
-                entry.target.style.animation = entry.target.dataset.skill;
-                move();
+                entry.target.style.animation = entry.target.dataset.animate;
+                move();            
                 moveHtml();
                 moveCss();
                 moveJS()
@@ -56,7 +84,8 @@ let callback = (entries) =>{
 
 let observer = new IntersectionObserver(callback);
 
-const animationItem = document.querySelectorAll('.mini-skill, .progress');
+
+const animationItem = document.querySelectorAll('.progress', '.mini-skill');
 animationItem.forEach(item => {
     observer.observe(item)
 })
@@ -68,6 +97,7 @@ let move = () =>{
 let x = 0; 
 
     if(x == 0){
+        
         x=1;
         let elem = document.querySelector('#python');
         let width = 1;
@@ -85,9 +115,6 @@ let x = 0;
         }
 
     }
-
-    
-    console.log('scroll')
 }
 
 
@@ -163,4 +190,3 @@ let moveJS = () =>{
 
 
 
-// window.addEventListener('scroll', move)
