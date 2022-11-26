@@ -1,3 +1,6 @@
+document.body.style.transform = 'scale(1)';
+document.body.style.zoom = screen.logicalXDPI / screen.deviceXDPI;
+
 // making the top nav responsive
 let topNav =() => {
     let nav = document.querySelector('#TopNav');

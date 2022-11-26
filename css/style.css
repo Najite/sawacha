@@ -208,6 +208,45 @@
 }
 
 
+/* adding responsiveness to modal element */
+@media screen and (max-device-width:480px){
+    .hire-modal .modal-content{
+        width: 80%;   
+        height: 10vh;     
+        overflow: hidden;
+    }
+
+    #fname, #description{
+        width: 100%;
+    }
+        
+}
+
+
+@media screen and (max-device-width:780px){
+    .hire-modal .modal-content{
+        width: 80%;
+        height: 70vh;
+        overflow: auto;
+    }
+
+    #fname, #description{
+        width: 100%;
+    }    
+}
+
+
+/* @media screen and (max-device-width:1024px){
+    .hire-modal .modal-content{
+        width: 40%;   
+        height: 70vh;     
+    }
+
+    #fname, #description{
+        width: 100%;
+    }
+    
+} */
 
 /* animating the banner text */
 @keyframes fly-in {
