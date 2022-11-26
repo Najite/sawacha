@@ -5,10 +5,6 @@
 
 }
 
-
-
-
-
 .container{
     padding: 1.5em 1em;
 }
@@ -104,6 +100,7 @@
 }
 
 .banner .banner-title{
+    font-family: 'Times New Roman', Times, serif, 'Roboto';
     width: 40%;
     margin: 3em 0em;
     animation-name: fly-in;
@@ -118,8 +115,9 @@
     height: 5vh;
     font-size: .7em;
     background-color: yellow;
-    animation: shake-lr .9s 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both 3 alternate-reverse;
-    -webkit-animation: shake-lr .9s 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both 3 alternate-reverse;
+    animation: scale-center 9s ease-in both 3 alternate-reverse;
+    -webkit-animation: scale-center 300ms 3s ease-in both 1 alternate;
+    opacity: 0;
 }
 
 
@@ -151,27 +149,64 @@
     color: orange;
     float: right;
 }
+
+
 .hire-modal{ 
     display: none;
     position: fixed;
     z-index: 1;
-    left: 0;
-    top: 0;
+    top: 0%;
     width: 100%;
     height: 100%;    
     overflow: auto;
-    background-color: blue;
+    
 }
 
 .hire-modal .modal-content{
-    width: 80%;
-    background-color: red;
+    height: 55vh;
+    width: 25%;
+    margin: 10% auto;    
+    background: rgb(35, 33, 32);
+    padding: .4em 1em;
 }
 
 .hire-modal .modal-contentt #cancelBtn{
     float: right;
 
 }
+
+
+#user-style{
+    margin-top: 2em;
+    margin-left: .5em;
+    position: absolute;
+    color: #000;
+}
+
+#fname{
+    width: 20vw;
+    padding: 1em 3em;
+    margin-top: 3em;
+}
+
+#description{
+    width: 20vw;
+    margin: 2em 0em;
+    padding: 1em ;
+    
+}
+
+#submit{
+    padding: .5em 1em;
+    font-weight: bolder;
+    background-color: yellow;
+    border: none;
+}
+
+#submit:hover{
+    cursor: pointer;
+}
+
 
 
 /* animating the banner text */
@@ -217,62 +252,27 @@
     
 }
 
-    
 
-@keyframes shake-lr {
-    0%, 100%{
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        
-        
-    }
-
-    10%{
-        transform: rotate(8deg);
-        -webkit-transform: rotate(8deg);
-        -moz-transform: rotate(8deg);
-        -ms-transform: rotate(8deg);
-        -o-transform: rotate(8deg);
-        
-    }
-
-
-    20%,40%, 60%{
-        transform: rotate(-10deg);
-        -webkit-transform: rotate(-10deg);
-        -moz-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-        -o-transform: rotate(-10deg);
-    }
-    
-    30%, 50%, 70%{
-        transform: rotate(10deg);
-        -webkit-transform: rotate(10deg);
-        -moz-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-        -o-transform: rotate(10deg);
-    }
-
-    80%{
-        transform: rotate(-8deg);
-        -webkit-transform: rotate(-8deg);
-        -moz-transform: rotate(-8deg);
-        -ms-transform: rotate(-8deg);
-        -o-transform: rotate(-8deg);
-    }
-
-    90%{
-        transform: rotate(8deg);
-        -webkit-transform: rotate(8deg);
-        -moz-transform: rotate(8deg);
-        -ms-transform: rotate(8deg);
-        -o-transform: rotate(8deg);
-}
+@keyframes scale-center {
+    0%{
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        opacity: 0;
 }
 
+    100%{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        opacity: 1;
+}
+    
+}
 
 
 /* making banner text responsive */
@@ -498,7 +498,7 @@
 
 /* mobile resposive for services rendered */
 @media screen and (max-device-width:480px) {
-    .project .project-container{
+    .project .container .project-container{
         display: block;
     }
 
@@ -514,15 +514,16 @@
 
 
 @media screen and (max-device-width:768px) {
-    .project .project-container{
-        display: block;
+    .project .container .project-container{
+        display: block;     
+        
     }
-
-    .project-container .pink-box, .black-box{
+    .project .container .project-container .pink-box, .project-container .black-box{
         width: 100%;
-        height: 45vh;
+        height: 35vh;
         font-size: .9em;
         padding: 1em;
+        
     }
     
     
@@ -735,8 +736,7 @@
 .project-box img{
     width: 100%;
     height: 35vh;
-    object-fit: cover;
-    object-position: center;
+    
     
 }
 

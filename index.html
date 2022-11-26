@@ -14,30 +14,18 @@
 <body>
     <div class="topnav" id="TopNav">
         <div class="container">
-            <a href="">Home 
-                <i class="fa-solid fa-house"></i>
-            </a>
-            <a href="">Skill
-                <i class="fa-solid fa-code"></i>
-            </a>
-            <a href="">Project
-                <i class="fa-solid fa-bars-progress"></i>
-            </a>
-
-            <a href="javascript:void(0);" class="icon" onclick="topNav()">
-                <i class="fa-sharp fa-solid fa-bars"></i>
-            </a>
+            <p>Sawacha Emmanuel</p>
         </div>
     </div>
 
     <!-- the banner area -->
     <section class="banner">
         <div class="banner-title">
-            <h1 id="text"></h1>
-
-            <button id="hire">Hire Me</button>
-            
+            <h1 id="text"></h1>  
+            <button id="hire">Hire Me</button>          
         </div>
+        
+    </div>
 
         <div class="banner-image">
             <img src="/image/profile.jpg" alt="banner image">
@@ -46,6 +34,15 @@
         <div class="hire-modal" id="hire-modal">
             <div class="modal-content">
                 <span id="cancelBtn">&times;</span>
+                <form method="post">
+                    <p>
+                        <i id="user-style" class="fa fa-user icon"></i>
+                        <input type="text" name="fname" id="fname" placeholder="FullName"></p>
+
+                    <textarea name="" id="description" cols="30" rows="10" placeholder="project description" aria-describedby="project-description"></textarea>
+
+                    <p><input type="submit" value="submit" id="submit"></p>
+                </form>
                 
             </form>      
             
@@ -66,6 +63,7 @@
             <img src="/image/about-service.jpg" alt="">
             </div>
 
+        
             <div class="service">
             <h3>i help companies and individuals build better, and scalable websites</h3>
 

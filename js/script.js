@@ -22,7 +22,7 @@ let topNav =() => {
 
 // making the typing effect
 let i = 0;
-let text = "Hello!! 'I'm Emmanuel \n and I'm a Backend Developer";
+let text = "Hello!! 'I'm Emmanuel \n and I'm A Backend Developer";
 let speed = 60;
 
 let bannerText = () => {
@@ -38,32 +38,25 @@ window.addEventListener('load', bannerText)
 //adding modal hire form
 const modal = document.querySelector('#hire-modal');
 const hireBtn = document.querySelector('#hire');
-const close = document.querySelector('#cancelBtn')[0];
+const close = document.querySelector('#cancelBtn');
 
 const openModal = () => {
-    modal.style.display ='block'
-}
+    modal.style.display ='block';
+};
 
-hireBtn.addEventListener('click', openModal)
+hireBtn.addEventListener('click', openModal);
 
 const closeModal = () => {
     modal.style.display = 'none';
-}
+};
 close.addEventListener('click', closeModal);
 
 
-
-
-
-
-const closeBtn = () => {
-    const close_hire = document.querySelector('#cancelBtn');
-    close_hire.style.display='none';
-}
-
-window.addEventListener('click', hireBtn)
-window.addEventListener('click', closeBtn)
-// window.addEventListener('click', close_hire)
+window.addEventListener('click', (event) => {
+    if(event.target === modal){
+        modal.style.display = 'none';
+    }
+} )
 
 
 let callback = (entries) =>{
@@ -80,7 +73,7 @@ let callback = (entries) =>{
             }
         }
     );
-}
+};
 
 let observer = new IntersectionObserver(callback);
 
